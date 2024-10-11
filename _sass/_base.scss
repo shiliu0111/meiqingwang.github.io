@@ -194,35 +194,46 @@ ul.task-list input[type="checkbox"] {
 
 .profile-container {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center; /* Align the image and text vertically */
+  gap: 20px; /* Add space between image and text */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .profile-image {
-  max-width: 150px;
-  flex-shrink: 0;
+  max-width: 120px; /* Adjust this value to make the image smaller */
+  flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .profile-info {
-  flex-grow: 1;
+  flex-grow: 1; /* Let the text take the remaining space */
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 2rem; /* You can adjust the size of your name */
+}
+
+.profile-info p {
+  margin: 5px 0;
 }
 
 .profile-image img {
-  border-radius: 50%;
-  max-width: 100%;
-}
-
-.more-info {
-  margin-bottom: 10px;
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain the image’s aspect ratio */
+  border-radius: 50%; /* Ensure circular shape if needed */
 }
 
 @media (max-width: 768px) {
   .profile-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stack the image and text on smaller screens */
+    align-items: flex-start; /* Align content to the left on mobile */
+  }
+
+  .profile-image {
+    max-width: 100px; /* You can reduce the image size further on smaller screens */
   }
 }
+
 
 
 .post-description {
