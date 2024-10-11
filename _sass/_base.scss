@@ -206,16 +206,17 @@ ul.task-list input[type="checkbox"] {
 
 .profile-info {
   flex-grow: 1;
+  padding-left: 20px;
 }
 
 .profile-info h1 {
-  margin: 0;
-  font-size: 1.8rem; /* Adjusted font size */
-  line-height: 1; /* Ensures that the text height is aligned with the font size */
+  margin: 0 0 10px 0; /* Add spacing between name and subtitle */
+  font-size: 1.8rem; /* Adjust the font size if necessary */
+  line-height: 1.2;  /* Adjust line height for better spacing */
 }
 
 .profile-info p {
-  margin: 5px 0;
+  margin: 10px 0; /* Increase space between lines (subtitle, address, etc.) */
 }
 
 .profile-image img {
@@ -234,6 +235,7 @@ ul.task-list input[type="checkbox"] {
     max-width: 100px;
   }
 }
+
 
 
 
