@@ -35,20 +35,21 @@ repo_trophies:
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
+
 # -----------------------------------------------------------------------------
-
-
-
+# RSS Feed
+# -----------------------------------------------------------------------------
+# will use title and url fields
+# Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
 # -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
 
+
 navbar_fixed: true
 footer_fixed: true
-search_enabled: False
-socials_in_search: true
-bib_search: true
+
 
 # Dimensions
 max_width: 930px
@@ -108,6 +109,8 @@ work_url: # work page URL
 x_username: # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
+
+rss_icon: true
 
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
