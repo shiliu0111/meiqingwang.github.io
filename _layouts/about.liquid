@@ -22,7 +22,7 @@ layout: default
         {% endif %}
       </div>
 
-      <!-- Profile Info Section (Name, Affiliations) -->
+      <!-- Profile Info Section (Name, Affiliations, etc.) -->
       <div class="profile-info">
         <h1 class="post-title">
           {% if site.title == 'blank' %}
@@ -32,8 +32,23 @@ layout: default
             {{ site.title }}
           {% endif %}
         </h1>
-        <p class="desc">{{ page.subtitle }}</p>
-        <p>{{ page.profile.affiliations }}</p>
+        <!-- Subtitle / Position Information -->
+        <p class="desc">{{ page.profile.position }}</p>
+        <p class="desc">Office: {{ page.profile.office }}</p>
+        <p class="desc">Email: <a href="mailto:{{ page.profile.email }}">{{ page.profile.email }}</a></p>
+
+        <!-- Social Media Icons Section -->
+        <div class="profile-icons">
+          <a href="https://github.com/yourusername" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:youremail@example.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -77,4 +92,5 @@ layout: default
     {% endif %}
   </article>
 </div>
+
 
