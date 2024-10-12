@@ -233,7 +233,7 @@ ul.task-list input[type="checkbox"] {
 .profile-icons a {
   color: #0e0d0e; /* Icon color */
   font-size: 2rem; /* Adjust this value to make the icons larger */
-  margin-right: 7px; /* Adds spacing between the icons */
+  margin-right: 5px; /* Adds spacing between the icons */
 }
 
 
@@ -1325,4 +1325,17 @@ ninja-keys::part(ninja-input-wrapper) {
 ::highlight(search) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
+}
+
+a, a:hover, a:focus {
+  color: #007bff;  /* Change all link colors to blue */
+}
+
+.btn, .highlight {
+  background-color: #007bff;  /* Change button and highlight backgrounds */
+  border-color: #007bff;  /* Change border color */
+}
+
+.btn:hover, .highlight:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
 }
