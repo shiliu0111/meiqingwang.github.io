@@ -6,7 +6,7 @@ nav: true
 nav_order: 4
 ---
 
-# My Services
+# Should include TA, student mentorship, reviewer, conference chair
 
 Here is a description of the services I provide:
 
