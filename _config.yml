@@ -182,7 +182,7 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  news:
+  News:
     defaults:
       layout: post
     output: true
