@@ -59,13 +59,14 @@ layout: default
     <div class="clearfix">{{ content }}</div>
 
     <!-- News Section -->
-    {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
+    <div class="scrollable-news">  <!-- Added scrollable container here -->
+      {% if page.news and site.announcements.enabled %}
+        <h2>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        </h2>
+        {% include news.liquid limit=false %}  <!-- Removed the limit -->
+      {% endif %}
+    </div>
 
     <!-- Selected papers Section -->
     {% if page.selected_papers %}
@@ -82,4 +83,24 @@ layout: default
   </article>
 </div>
 
+<!-- Add this CSS to make the news section scrollable -->
+<style>
+  .scrollable-news {
+    max-height: 300px;  /* Set the maximum height for the news section */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    padding-right: 10px; /* Avoid overlap with scrollbar */
+  }
 
+  .scrollable-news::-webkit-scrollbar {
+    width: 8px; /* Width of scrollbar for WebKit-based browsers */
+  }
+
+  .scrollable-news::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Customize scrollbar color */
+    border-radius: 10px;
+  }
+
+  .scrollable-news::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Track background */
+  }
+</style>
