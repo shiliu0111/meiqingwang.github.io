@@ -1,8 +1,16 @@
 ---
-layout: service
+title: "Service"
 permalink: /service/
-title: Service
-nav: true
-nav_order: 5
---- 
+layout: page
+---
+
+# My Services
+
+Here is a description of the services I provide:
+
+- Research consultation
+- Academic service
+- Peer review for academic journals
+
+Feel free to reach out for more information.
 
