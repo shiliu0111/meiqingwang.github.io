@@ -230,6 +230,13 @@ ul.task-list input[type="checkbox"] {
   border-radius: 50%;
 }
 
+.profile-icons a {
+  color: #0e0d0e; /* Icon color */
+  font-size: 2rem; /* Adjust this value to make the icons larger */
+  margin-right: 10px; /* Adds spacing between the icons */
+}
+
+
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
@@ -240,9 +247,6 @@ ul.task-list input[type="checkbox"] {
     max-width: 100px;
   }
 }
-
-
-
 
 
 .post-description {
