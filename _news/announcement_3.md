@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our group is attending ADSA 2024. I’ll be presenting a poster and a spotlight presentation.
+Our group is attending **ADSA 2024**. I’ll be presenting a poster and a spotlight presentation.
