@@ -10,8 +10,8 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   position: "Postdoctoral researcher"
-  office: "Eschikon 27/EHB E18, 8315 Lindau, Switzerlandt"
-  email: "meiqing.wang@ethz.ch"
+  office: "Eschikon 27/EHB E18, 8315 Lindau, Switzerland"
+  email: "meiqing.wang@usys.ethz.ch"
 
     
     

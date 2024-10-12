@@ -219,6 +219,11 @@ ul.task-list input[type="checkbox"] {
   margin: 10px 0; /* Increase space between lines (subtitle, address, etc.) */
 }
 
+.profile-info p.desc {
+  margin: 3px 0; /* Adjust the margin to decrease the space between the lines */
+  line-height: 1.2; /* You can also tweak the line height */
+}
+
 .profile-image img {
   max-width: 100%;
   height: auto;
