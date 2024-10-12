@@ -39,16 +39,23 @@ layout: default
 
         <!-- Social Media Icons Section -->
         <div class="profile-icons">
-          <a href="https://github.com/yourusername" target="_blank">
+          <a href="{{ page.profile.github }}" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <a href="{{ page.profile.linkedin }}" target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="mailto:youremail@example.com" target="_blank">
+          <a href="{{ page.profile.scholar }}" target="_blank">
+            <i class="fas fa-graduation-cap"></i>  <!-- Google Scholar icon -->
+          </a>
+          <a href="{{ page.profile.orcid }}" target="_blank">
+            <i class="fab fa-orcid"></i>  <!-- ORCID icon -->
+          </a>
+          <a href="{{ page.profile.email_link }}" target="_blank">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
+
       </div>
     </div>
 

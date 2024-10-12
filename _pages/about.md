@@ -8,10 +8,15 @@ permalink: /
 profile:
   align: top
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   position: "Postdoctoral researcher"
   office: "Eschikon 27/EHB E18, 8315 Lindau, Switzerland"
   email: "meiqing.wang@usys.ethz.ch"
+  #github: "https://github.com/yourusername"
+  linkedin: "https://www.linkedin.com/in/meiqing-wang-4b99241a6/"
+  scholar: "https://scholar.google.com/citations?user=Y9kV40MAAAAJ&hl=en&oi=ao"  # Add Google Scholar URL
+  orcid: "https://orcid.org/0000-0001-7675-5483"  # Add ORCID link here
+  email_link: "mailto:meiqing.wang@usys.ethz.ch"
 
     
     
