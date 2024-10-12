@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The first Master's student I co-supervised successfully defended his thesis! 
+The first Master's student I co-supervised successfully defended his thesis! :clap::clap::clap:
