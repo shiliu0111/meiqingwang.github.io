@@ -51,16 +51,16 @@
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
+      {%- assign last_author_index = entry.author_array | size | minus: 1 -%} <!-- Get the last author index -->
       {%- assign corresponding_author_name = entry.corresponding_author | downcase | split: ' ' -%}
-      {%- assign last_author_index = entry.author_array | size | minus: 1 -%}
-      
+
       {%- for author in entry.author_array -%}
         {%- assign author_last_name = author.last | downcase -%}
         {%- assign author_first_name = author.first | downcase -%}
 
-        <!-- Check if this author is the corresponding author by BibTeX entry or if they are the last author -->
+        <!-- If this author is explicitly marked as corresponding_author or is the last author, show the asterisk -->
         {% if (corresponding_author_name contains author_first_name and corresponding_author_name contains author_last_name) or forloop.index0 == last_author_index %}
-          {{ author.first }} {{ author.last }}* <!-- Asterisk for corresponding author or last author -->
+          {{ author.first }} {{ author.last }}* <!-- Add asterisk for corresponding author -->
         {% else %}
           {{ author.first }} {{ author.last }}
         {% endif %}
