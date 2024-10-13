@@ -56,15 +56,11 @@
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
         
-        {%- if author.first == 'Meiqing' and author.last == 'Wang' -%}
-          <u>{{ author.first }} {{ author_last_html }}</u> <!-- Underline only your name -->
-        {%- else -%}
-          {%- if coauthor_url -%}
-            <a href="{{ coauthor_url }}">{{ author.first }} {{ author_last_html }}</a>
-          {%- else -%}
-            {{ author.first }} {{ author_last_html }}
-          {% endif %}
-        {%- endif -%}
+        {% if author.first == 'Meiqing' and author.last == 'Wang' %}
+          <u>{{ author.first }} {{ author_last_html }}</u>
+        {% else %}
+          {{ author.first }} {{ author_last_html }}
+        {% endif %}
 
         {% unless forloop.last %},&nbsp;{% endunless %}
       {% endfor %}
@@ -78,10 +74,10 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.pdf %}
-        <a href="{{ entry.pdf }}" class="btn btn-outline-secondary btn-sm z-depth-0" style="border-color: black; border-width: 1px; color: black;">Paper Link</a>
+        <a href="{{ entry.pdf }}" class="btn btn-sm" style="border: 1px solid black; color: black;">Paper Link</a>
       {% endif %}
       {% if entry.webpage %}
-        <a href="{{ entry.webpage }}" class="btn btn-outline-secondary btn-sm z-depth-0" style="border-color: black; border-width: 1px; color: black;">Webpage</a>
+        <a href="{{ entry.webpage }}" class="btn btn-sm" style="border: 1px solid black; color: black;">Webpage</a>
       {% endif %}
     </div>
 
