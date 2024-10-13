@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Development of Automatic Physiological and Behavioural Monitoring Systems for Pigs
+description: Doctoral project 
 img: assets/img/12.jpg
 importance: 1
 category: work
