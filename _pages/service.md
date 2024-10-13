@@ -6,7 +6,7 @@ nav: true
 nav_order: 4
 ---
 
-# Teaching Experience
+# <span style="font-size: 20px;">Teaching Experience</span>
 
 Teaching assistant for Master students:
 
