@@ -58,14 +58,14 @@
         {%- assign author_last_name = author.last | downcase | strip -%}
         {%- assign author_first_name = author.first | downcase | strip -%}
 
-        <!-- Check for corresponding author -->
+        <!-- Adding * to the corresponding author (last author by default) -->
         {% if (corresponding_author_name contains author_first_name and corresponding_author_name contains author_last_name) or forloop.index0 == last_author_index %}
           {{ author.first | strip }} {{ author.last | strip }}*<!-- Adding asterisk for corresponding author -->
         {% else %}
           {{ author.first | strip }} {{ author.last | strip }}
         {% endif %}
 
-        {%- if forloop.last == false -%}, {% endif %} <!-- This removes extra spaces -->
+        {%- unless forloop.last -%},<!-- Using unless to control the comma between names without extra spaces -->{% endunless %}
       {%- endfor %}
     </div>
 
