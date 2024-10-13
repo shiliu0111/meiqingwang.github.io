@@ -68,10 +68,10 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.pdf %}
-        <a href="{{ entry.pdf }}" class="btn btn-outline-secondary btn-sm" style="border: 1px solid black; color: black;">Paper Link</a> <!-- Explicit black button -->
+        <a href="{{ entry.pdf }}" class="btn btn-outline-secondary btn-sm" style="border: 1px solid black !important; color: black !important;">Paper Link</a> <!-- Explicit black button with !important -->
       {% endif %}
       {% if entry.webpage %}
-        <a href="{{ entry.webpage }}" class="btn btn-outline-secondary btn-sm" style="border: 1px solid black; color: black;">Webpage</a> <!-- Explicit black button -->
+        <a href="{{ entry.webpage }}" class="btn btn-outline-secondary btn-sm" style="border: 1px solid black !important; color: black !important;">Webpage</a> <!-- Explicit black button with !important -->
       {% endif %}
     </div>
 
