@@ -1,3 +1,5 @@
+---
+---
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -52,21 +54,22 @@
     <!-- Author -->
     <div class="author">
       {%- assign last_author_index = entry.author_array | size | minus: 1 -%} <!-- Get the last author index -->
-      {%- assign corresponding_author_name = entry.corresponding_author | downcase | split: ' ' -%}
-
       {%- for author in entry.author_array -%}
-        {%- assign author_last_name = author.last | downcase | strip -%}
-        {%- assign author_first_name = author.first | downcase | strip -%}
+        {% assign author_is_self = false %}
+        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
 
         <!-- Adding * to the corresponding author (last author by default) -->
-        {% if (corresponding_author_name contains author_first_name and corresponding_author_name contains author_last_name) or forloop.index0 == last_author_index %}
-          {{ author.first | strip }} {{ author.last | strip }}*<!-- Adding asterisk for corresponding author -->
+        {% assign author_full = author.first | append: " " | append: author_last_html %} <!-- Constructing full name -->
+
+        {% if forloop.index0 == last_author_index or author.corresponding_author == 'true' %}
+          {{ author_full }}* <!-- Adding asterisk for corresponding author -->
         {% else %}
-          {{ author.first | strip }} {{ author.last | strip }}
+          {{ author_full }}
         {% endif %}
 
-        {%- unless forloop.last -%},<!-- Using unless to control the comma between names without extra spaces -->{% endunless %}
-      {%- endfor %}
+        {% unless forloop.last %},{% endif %} <!-- No space before comma, removed the extra space -->
+      {% endfor %}
     </div>
 
     <!-- Journal/Book title and date -->
