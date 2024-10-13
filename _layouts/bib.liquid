@@ -80,8 +80,8 @@
           {% if forloop.first == false %},&nbsp;{% endif %}
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif %}
         {% endif %}
-        {%- if author_is_self or (author.first == 'Meiqing' and author.last == 'Wang') -%}
-          <em><u>{{- author.first }} {{ author_last_html }}</u></em> <!-- Underline your name -->
+        {%- if author_is_self -%}
+          <em><u>{{- author.first }} {{ author_last_html }}</u></em> <!-- Underline your name only if it's you -->
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">{{- author.first }} {{ author_last_html }}</a>
@@ -156,13 +156,10 @@
         </a>
       {% endif %}
       {% if entry.pdf %}
-        <a href="{{ entry.pdf }}" class="btn btn-outline-dark btn-sm" role="button">PDF</a>
-      {% endif %}
-      {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-outline-dark btn-sm" role="button">CODE</a>
+        <a href="{{ entry.pdf }}" class="btn btn-outline-secondary btn-sm" role="button">PDF</a> <!-- Updated button class -->
       {% endif %}
       {% if entry.webpage %}
-        <a href="{{ entry.webpage }}" class="btn btn-outline-dark btn-sm" role="button">Webpage</a>
+        <a href="{{ entry.webpage }}" class="btn btn-outline-secondary btn-sm" role="button">Webpage</a> <!-- Updated button class -->
       {% endif %}
     </div>
 
