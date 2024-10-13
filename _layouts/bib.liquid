@@ -53,7 +53,6 @@
     <div class="author">
       {%- assign last_author_index = entry.author_array | size | minus: 1 -%} <!-- Get the last author index -->
       {%- for author in entry.author_array -%}
-        {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
 
