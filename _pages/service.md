@@ -6,6 +6,18 @@ nav: true
 nav_order: 4
 ---
 
+# <span style="font-size: 22px;">Student Mentorship</span>
+
+Thesis student
+
+- Master’s student: Boris Zandona, Department of Environmental Systems Sciences, ETH Zurich (Daily supervisor, graduated spring 2024,now Ph.D student in SLU)
+
+Training Course
+
+- PhD student: Sara Mondini, University of Milan (Daily supervisor; completed training from May to August of 2024)
+- Master’s student: Vivienne Magdalena Alexandra Hanke, Department of Environmental Systems Sciences, ETH Zurich (Daily supervisor, completed training from June to September of 2024)
+
+
 # <span style="font-size: 22px;">Teaching Experience</span>
 
 Teaching assistant 
