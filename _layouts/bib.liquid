@@ -20,7 +20,7 @@
           </abbr>
         {% else %}
           {%- if entry.type == 'article' -%}
-            <abbr class="badge rounded w-100" style="background-color: blue;">{{ entry.abbr }}</abbr> <!-- Default blue for journal papers -->
+            <abbr class="badge rounded w-100" style="background-color: #0056b3;">{{ entry.abbr }}</abbr> <!-- Default blue for journal papers -->
           {%- elsif entry.type == 'inproceedings' -%}
             <abbr class="badge rounded w-100" style="background-color: purple;">{{ entry.abbr }}</abbr> <!-- Default purple for conference proceedings -->
           {%- else -%}
