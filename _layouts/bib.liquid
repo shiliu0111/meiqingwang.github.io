@@ -58,14 +58,14 @@
         {%- assign author_last_name = author.last | downcase -%}
         {%- assign author_first_name = author.first | downcase -%}
 
-        <!-- If this author is explicitly marked as corresponding_author or is the last author, show the asterisk -->
+        <!-- Adding * to the corresponding author (last author by default) -->
         {% if (corresponding_author_name contains author_first_name and corresponding_author_name contains author_last_name) or forloop.index0 == last_author_index %}
-          {{ author.first }} {{ author.last }}* <!-- Add asterisk for corresponding author -->
+          {{ author.first }} {{ author.last }}* <!-- Adding asterisk for corresponding author -->
         {% else %}
           {{ author.first }} {{ author.last }}
         {% endif %}
 
-        {% unless forloop.last %},&nbsp;{% endunless %}
+        {% unless forloop.last %},&nbsp;{% endunless %} <!-- No space before commas -->
       {% endfor %}
     </div>
 
