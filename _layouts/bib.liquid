@@ -65,8 +65,8 @@
           {{ author.first | strip }} {{ author.last | strip }}
         {% endif %}
 
-        {% unless forloop.last %},&nbsp;{% endunless %}
-      {% endfor %}
+        {%- unless forloop.last -%},{%- endunless -%} <!-- This removes space around the commas -->
+      {%- endfor %}
     </div>
 
     <!-- Journal/Book title and date -->
