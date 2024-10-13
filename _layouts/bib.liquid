@@ -55,17 +55,17 @@
       {%- assign corresponding_author_name = entry.corresponding_author | downcase | split: ' ' -%}
 
       {%- for author in entry.author_array -%}
-        {%- assign author_last_name = author.last | downcase -%}
-        {%- assign author_first_name = author.first | downcase -%}
+        {%- assign author_last_name = author.last | downcase | strip -%}
+        {%- assign author_first_name = author.first | downcase | strip -%}
 
         <!-- Adding * to the corresponding author (last author by default) -->
         {% if (corresponding_author_name contains author_first_name and corresponding_author_name contains author_last_name) or forloop.index0 == last_author_index %}
-          {{ author.first }} {{ author.last }}* <!-- Adding asterisk for corresponding author -->
+          {{ author.first | strip }} {{ author.last | strip }}* <!-- Adding asterisk for corresponding author -->
         {% else %}
-          {{ author.first }} {{ author.last }}
+          {{ author.first | strip }} {{ author.last | strip }}
         {% endif %}
 
-        {% unless forloop.last %},&nbsp;{% endunless %} <!-- No space before commas -->
+        {% unless forloop.last %},&nbsp;{% endunless %}
       {% endfor %}
     </div>
 
