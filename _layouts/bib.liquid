@@ -6,10 +6,12 @@
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+          {%- if entry.type == 'article' -%}
+            {% assign venue_style = 'style="background-color: blue;"' %} <!-- Blue for journal papers -->
+          {%- elsif entry.type == 'inproceedings' -%}
+            {% assign venue_style = 'style="background-color: purple;"' %} <!-- Purple for conference proceedings -->
           {%- endif -%}
-          <abbr class="badge rounded w-100" {% if venue_style %}{{ venue_style }}{% endif %}>
+          <abbr class="badge rounded w-100" {{ venue_style }}>
             {% if site.data.venues[entry.abbr].url %}
               <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
             {% else %}
@@ -17,7 +19,13 @@
             {% endif %}
           </abbr>
         {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
+          {%- if entry.type == 'article' -%}
+            <abbr class="badge rounded w-100" style="background-color: blue;">{{ entry.abbr }}</abbr> <!-- Default blue for journal papers -->
+          {%- elsif entry.type == 'inproceedings' -%}
+            <abbr class="badge rounded w-100" style="background-color: purple;">{{ entry.abbr }}</abbr> <!-- Default purple for conference proceedings -->
+          {%- else -%}
+            <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
+          {%- endif -%}
         {% endif %}
       {% endif %}
       {% if entry.preview %}
@@ -62,7 +70,11 @@
 
     <!-- Journal/Book title and date -->
     <div class="periodical">
-      <em>{{ entry.journal }}</em>, {{ entry.year }}
+      {% if entry.booktitle %}
+        <em>{{ entry.booktitle }}</em> {% if entry.year %} {{ entry.year }}{% endif %}
+      {% else %}
+        <em>{{ entry.journal }}</em>, {{ entry.year }}
+      {% endif %}
     </div>
 
     <!-- Links/Buttons -->
