@@ -6,12 +6,15 @@ nav: true
 nav_order: 4
 ---
 
-# <span style="font-size: 20px;">Teaching Experience</span>
+# <span style="font-size: 22px;">Teaching Experience</span>
 
-Teaching assistant for Master students:
+Teaching assistant 
 
-- I0W21A Internship bioscience engineering, KU Leuven, Spring Semester of 2019 and 2020
-- Excursion leader for undergraduate students, ETH Zurich, March 24, 2023 & April 12, 2024
+- Master students: I0W21A Internship bioscience engineering, KU Leuven, Spring Semester of 2019 and 2020
+
+Excursion leader
+
+-  Undergraduate students: barn excursion, ETH Zurich, March 24, 2023 & April 12, 2024
 
 
 
