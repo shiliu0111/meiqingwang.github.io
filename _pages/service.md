@@ -6,6 +6,19 @@ nav: true
 nav_order: 4
 ---
 
+# <span style="font-size: 22px;">Journal Reviewer</span>
+
+- Computers and Electronics in Agriculture
+- Journal of Animal Science
+- Journal of the ASABE
+- Animals
+- Sensors
+- IEEE Transactions on Systems, Man and Cybernetics
+
+# <span style="font-size: 22px;">Conference Session Chair</span>
+
+- 10th European Conference on Precision Livestock Farming (ECPLF 2023)
+
 # <span style="font-size: 22px;">Student Mentorship</span>
 
 Thesis student
