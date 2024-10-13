@@ -60,12 +60,12 @@
 
         <!-- Adding * to the corresponding author (last author by default) -->
         {% if (corresponding_author_name contains author_first_name and corresponding_author_name contains author_last_name) or forloop.index0 == last_author_index %}
-          {{ author.first | strip }} {{ author.last | strip }}* <!-- Adding asterisk for corresponding author -->
+          {{ author.first | strip }} {{ author.last | strip }}*<!-- Adding asterisk for corresponding author -->
         {% else %}
           {{ author.first | strip }} {{ author.last | strip }}
         {% endif %}
 
-        {%- unless forloop.last -%},{%- endunless -%} <!-- This removes space around the commas -->
+        {%- unless forloop.last -%},{% endunless %} <!-- This ensures no extra spaces are added -->
       {%- endfor %}
     </div>
 
