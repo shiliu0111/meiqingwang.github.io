@@ -59,16 +59,17 @@
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
 
-        <!-- Adding * to the corresponding author (last author by default) -->
+        <!-- Check if author is yourself -->
         {% assign author_full = author.first | append: " " | append: author_last_html %} <!-- Constructing full name -->
-
-        {% if forloop.index0 == last_author_index or author.corresponding_author == 'true' %}
+        {% if author.first == 'Meiqing' and author.last == 'Wang' %}
+          <u>{{ author_full }}</u> <!-- Underline your name -->
+        {% elsif forloop.index0 == last_author_index or author.corresponding_author == 'true' %}
           {{ author_full }}* <!-- Adding asterisk for corresponding author -->
         {% else %}
           {{ author_full }}
         {% endif %}
 
-        {% unless forloop.last %},{% endif %} <!-- No space before comma, removed the extra space -->
+        {% unless forloop.last %},{% endunless %} <!-- No space before comma, removed the extra space -->
       {% endfor %}
     </div>
 
