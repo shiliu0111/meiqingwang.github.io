@@ -6,13 +6,13 @@ nav: true
 nav_order: 4
 ---
 
-# Should include TA, student mentorship, reviewer, conference chair
+#Teaching Experience
 
-Here is a description of the services I provide:
+Teaching assistant for Master students:
 
-- Research consultation
-- Academic service
-- Peer review for academic journals
+- I0W21A Internship bioscience engineering, KU Leuven, Spring Semester of 2019 and 2020
+- Excursion leader for undergraduate students, ETH Zurich, March 24, 2023 & April 12, 2024
 
-Feel free to reach out for more information.
+
+
 
