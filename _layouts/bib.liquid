@@ -51,19 +51,15 @@
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
-      {%- assign last_author_index = entry.author_array | size | minus: 1 -%} <!-- Get the last author index -->
+      {%- assign corresponding_author_name = entry.corresponding_author | downcase | split: ' ' -%}
       {%- for author in entry.author_array -%}
-        {% assign author_is_self = false %}
-        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
-        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {%- assign author_last_name = author.last | downcase -%}
 
-        <!-- Adding * to the corresponding author -->
-        {% if entry.corresponding_author contains author.first %}
-          {{ author.first }} {{ author_last_html }}* <!-- Adding asterisk for corresponding author defined in BibTeX -->
-        {% elsif forloop.index0 == last_author_index %}
-          {{ author.first }} {{ author_last_html }}* <!-- Adding asterisk for default last author as corresponding author -->
+        <!-- Check if this author is the corresponding author -->
+        {% if corresponding_author_name contains author.first and corresponding_author_name contains author_last_name %}
+          {{ author.first }} {{ author.last }}* <!-- Asterisk for specified corresponding author -->
         {% else %}
-          {{ author.first }} {{ author_last_html }}
+          {{ author.first }} {{ author.last }}
         {% endif %}
 
         {% unless forloop.last %},&nbsp;{% endunless %}
