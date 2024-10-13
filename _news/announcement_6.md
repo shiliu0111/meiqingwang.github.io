@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper was accepted by **JDS**. Thanks to my colleagues and collaborators!
+One paper was accepted by **Frontiers in Plant Science**. Thanks to my collaborators!
