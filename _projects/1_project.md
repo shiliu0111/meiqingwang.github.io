@@ -45,12 +45,26 @@ In a similar way, behaviour monitoring was conducted on the video of lactating s
 
 # <span style="font-size: 20px;">Subobjective 2</span>
 
-The second objective of this thesis was to develop a tracking algorithm capable of obtaining the ID of each pig housed in a group environment and re-identifying each pigs when going out of the field of view and then reappearing. Therefore, extra re-identification (re-ID) features were extracted in order to associate the pigs. Additionally, the total number of pigs was introduced as a constraint, and three associations based on Intersection over Union (IoU) and re-ID features were made to avoid introducing too many ID numbers. As a result, the developed tracking algorithm had a tracking percentage of 16.78% per individual on a 85-min-long video, which was improved a lot compared to studies not using re-ID features. Although there is still room to improve the performance, the developed tracking algorithm can solve the ID switching problem to some extent and could thus potentially be used for other applications as well. The video demo below displays an easy case to re-identify the pigs when they re-appear the field of view. 
+The second objective of this project was to develop a tracking algorithm capable of obtaining the ID of each pig housed in a group environment and re-identifying each pigs when going out of the field of view and then reappearing. Therefore, extra re-identification (re-ID) features were extracted in order to associate the pigs. Additionally, the total number of pigs was introduced as a constraint, and three associations based on Intersection over Union (IoU) and re-ID features were made to avoid introducing too many ID numbers. As a result, the developed tracking algorithm had a tracking percentage of 16.78% per individual on a 85-min-long video, which was improved a lot compared to studies not using re-ID features. Although there is still room to improve the performance, the developed tracking algorithm can solve the ID switching problem to some extent and could thus potentially be used for other applications as well. The video demo below displays a straightforward case of re-identifying pigs as they re-enter the field of view. The the corresponding paper can be accessed through this [link](https://doi.org/10.1016/j.biosystemseng.2022.07.017).
 
 <!-- Video Embed -->
 <div style="display: flex; justify-content: center; align-items: center;">
   <video autoplay controls loop muted style="max-width: 800px; width: 100%;">
     <source src="{{ site.baseurl }}/assets/img/project1-3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<br>
+
+# <span style="font-size: 20px;">Subobjective 3</span>
+
+Regarding the third subobjective, an experiment on the effect of varying temperature profile on RR was conducted on 5 pigs that were housed in a group. Four of these pigs wore ECG devices to collect the GS measurement, whereas one control pig did not wear a belt in order to rule out the effect of the belt. Videos were continuously recorded during the experiment. An algorithm was developed to monitor the RR of pigs in an automatic way, where each pig was detected first with an oriented bounding box, after which the RR was extracted by analysing the time-varying features extracted from the middle 1/3 of the bounding box. The comparison with GS showed good agreement with an MAE of 2.38 breaths/minute in the 4 pigs wearing belts and 1.72 breaths/min in the control pig, an RMSE of 3.46 breaths/min in the 4 pigs wearing belts and 2.26 breaths/min in the control pig, and a correlation coefficient of 0.92 in the 4 pigs wearing belts and 0.95 in the control pig. Below is a video demonstrating the RR monitoring of a pig housed in a group. The corresponding paper can be accessed through this [link](https://doi.org/10.1016/j.compag.2023.107899).
+
+<!-- Video Embed -->
+<div style="display: flex; justify-content: center; align-items: center;">
+  <video autoplay controls loop muted style="max-width: 800px; width: 100%;">
+    <source src="{{ site.baseurl }}/assets/img/project1-4.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
