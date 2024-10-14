@@ -40,3 +40,17 @@ In a similar way, behaviour monitoring was conducted on the video of lactating s
     Your browser does not support the video tag.
   </video>
 </div>
+
+<br>
+
+# <span style="font-size: 20px;">Subobjective 2</span>
+
+The second objective of this thesis was to develop a tracking algorithm capable of obtaining the ID of each pig housed in a group environment and re-identifying each pigs when going out of the field of view and then reappearing. Therefore, extra re-identification (re-ID) features were extracted in order to associate the pigs. Additionally, the total number of pigs was introduced as a constraint, and three associations based on Intersection over Union (IoU) and re-ID features were made to avoid introducing too many ID numbers. As a result, the developed tracking algorithm had a tracking percentage of 16.78% per individual on a 85-min-long video, which was improved a lot compared to studies not using re-ID features. Although there is still room to improve the performance, the developed tracking algorithm can solve the ID switching problem to some extent and could thus potentially be used for other applications as well. The video demo below displays an easy case to re-identify the pigs when they re-appear the field of view. 
+
+<!-- Video Embed -->
+<div style="display: flex; justify-content: center; align-items: center;">
+  <video autoplay controls loop muted style="max-width: 800px; width: 100%;">
+    <source src="{{ site.baseurl }}/assets/img/project1-3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
