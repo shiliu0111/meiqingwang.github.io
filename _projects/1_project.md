@@ -29,6 +29,7 @@ For the first sub-objective, HR and postural behaviour of a single pig were extr
   </video>
 </div>
 
+<br>
 
 In a similar way, behaviour monitoring was conducted on the video of lactating sows, where each sow was separately housed and the videos of different postural behaviours were recorded. The behaviours were classified by extracting the spatial and temporal features from the videos based on a deep learning method and Principle Component Analysis (PCA). Accuracies of 95.33% and 92.67% were obtained on videos without and with piglets, respectively. The video below demonstrates the monitoring of the sow's postural behavior. The paper regarding this work can be found via this [link](https://doi.org/10.1016/j.compag.2021.106351).
 
