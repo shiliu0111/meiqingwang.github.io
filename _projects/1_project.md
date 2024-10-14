@@ -19,7 +19,7 @@ Automated physiological and behavioural monitoring can play a major role in asse
 
 # <span style="font-size: 20px;">Subobjective 1</span>
 
-For the first sub-objective, HR and postural behaviour of a single pig were extracted and monitored respectively. To monitor the HR, the videos of an anesthetized and a resting pig were recorded while pigs wore electrocardiogram (ECG) devices for collecting the Gold Standard (GS) of HR. The HR of the pigs were extracted by frequency analysis. Compared with the GS, the extracted HR had 2.33 beats/minute in mean absolute error (MAE) resulting in 2.13% of MAE over averaged HR, 3.09 beats/min in root mean square error (RMSE) resulting in 2.83 % of RMSE over averaged HR, and 67% in HR estimation error below 3.5 beats/min for the anesthetized pig, and 4.69 beats/min in MAE (2.91% over averaged HR), 6.43 beats/min in RMSE (3.98% over averaged HR) and 57% in for the resting pig. A video in below shows the monitroing of HR from a short RGB video. This work has been published in a peer-reviewed journal, and the paper can be accessed via this [link](https://doi.org/10.3390/ani11020442).   
+For the first sub-objective, HR and postural behaviour of a single pig were extracted and monitored respectively. To monitor the HR, the videos of an anesthetized and a resting pig were recorded while pigs wore electrocardiogram (ECG) devices for collecting the Gold Standard (GS) of HR. The HR of the pigs were extracted by frequency analysis. Compared with the GS, the extracted HR had 2.33 beats/minute in mean absolute error (MAE) resulting in 2.13% of MAE over averaged HR, 3.09 beats/min in root mean square error (RMSE) resulting in 2.83 % of RMSE over averaged HR, and 67% in HR estimation error below 3.5 beats/min for the anesthetized pig, and 4.69 beats/min in MAE (2.91% over averaged HR), 6.43 beats/min in RMSE (3.98% over averaged HR) and 57% in for the resting pig. A video demo in below shows the monitroing of HR from a short RGB video. This work has been published in a peer-reviewed journal, and the paper can be accessed via this [link](https://doi.org/10.3390/ani11020442).   
 
 <!-- Video Embed -->
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -29,3 +29,12 @@ For the first sub-objective, HR and postural behaviour of a single pig were extr
   </video>
 </div>
 
+In a similar way, behaviour monitoring was conducted on the video of lactating sows, where each sow was separately housed and the videos of different postural behaviours were recorded. The behaviours were classified by extracting the spatial and temporal features from the videos based on a deep learning method and Principle Component Analysis (PCA). Accuracies of 95.33% and 92.67% were obtained on videos without and with piglets, respectively. The video below demonstrates the monitoring of the sow's postural behavior. The paper regarding this work can be found via this [link](https://doi.org/10.1016/j.compag.2021.106351).
+
+<!-- Video Embed -->
+<div style="display: flex; justify-content: center; align-items: center;">
+  <video autoplay controls loop muted style="max-width: 800px; width: 100%;">
+    <source src="{{ site.baseurl }}/assets/img/project1-2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
