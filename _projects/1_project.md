@@ -17,3 +17,10 @@ Automated physiological and behavioural monitoring can play a major role in asse
   - to develop a tracking algorithm capable of identifying and tracking individual pigs in a group-housed environment.
   - to assess whether physiological parameters can be effectively monitored in group-housed situations.
 
+For the first sub-objective, HR and postural behaviour of a single pig were extracted and monitored respectively. To monitor the HR, the videos of an anesthetized and a resting pig were recorded while pigs wore electrocardiogram (ECG) devices for collecting the Gold Standard (GS) of HR. The HR of the pigs were extracted by frequency analysis. Compared with the GS, the extracted HR had 2.33 beats/minute in mean absolute error (MAE) resulting in 2.13% of MAE over averaged HR, 3.09 beats/min in root mean square error (RMSE) resulting in 2.83 % of RMSE over averaged HR, and 67% in HR estimation error below 3.5 beats/min for the anesthetized pig, and 4.69 beats/min in MAE (2.91% over averaged HR), 6.43 beats/min in RMSE (3.98% over averaged HR) and 57% in for the resting pig. A video in below shows the monitroing of HR from a short RGB video.  
+
+<!-- Video Embed -->
+<video width="720" height="480" controls>
+  <source src="{{ site.baseurl }}/assets/img/project1-1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
